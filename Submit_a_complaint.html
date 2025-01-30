@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Complaint</title>
+<link rel="stylesheet" href="submit_a_complaint.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="complain.html">Complain</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li class="home-button"><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <form id="complaint-form" action="submit_a_complaint.php" method="POST">
+        <h2>Submit a Complaint</h2>
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="complaint">Complaint:</label>
+            <textarea id="complaint" name="complaint" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<a href="#" class="back-button">Back</a>
+
+<div id="dialog-container" class="hidden">
+    <div class="dialog-content">
+        <svg id="dialog-icon" viewBox="0 0 24 24"></svg>
+        <p id="dialog-message"></p>
+        <button id="dialog-ok">OK</button>
+    </div>
+</div>
+
+<script src="submit_a_complaint.js"></script>
+</body>
+</html>

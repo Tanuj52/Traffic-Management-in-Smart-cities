@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000; /* Black navbar */
+    color: #fff;
+    padding: 15px 0; /* Increased height */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.modules {
+    display: flex;
+}
+
+.module {
+    position: relative;
+    margin-right: 20px;
+}
+
+.module .main {
+    cursor: pointer;
+    font-size: 24px; /* Increased font size */
+    color: #fff; /* White font color */
+    text-decoration: none;
+}
+
+.sub-modules {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 204, 102, 0.8); /* Light orange with opacity */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.module:hover .sub-modules {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub-modules a {
+    display: block;
+    padding: 5px 0;
+    color: #fff; /* White font color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sub-modules a:hover {
+    color: #fff; /* White font color */
+    transform: translateX(5px);
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.button {
+    background-color: #333; /* Dark gray */
+    color: #fff; /* White font color */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #555; /* Dark gray with slightly lighter shade on hover */
+}
+
+/* Background Image */
+.background-image {
+    background-image: url('home_background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Modules Grid */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.module-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #fff; /* White text color */
+    border-radius: 10px; /* Slightly rounded borders */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.module-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.module-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.module-card h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.module-card p {
+    font-size: 16px;
+    padding: 0 20px 20px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s; /* Smooth transition */
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Apply animation to the individual images */
+.slider .slide:nth-child(1) { animation: slide-animation 9s infinite; }
+.slider .slide:nth-child(2) { animation: slide-animation 9s infinite; }
+.slider .slide:nth-child(3) { animation: slide-animation 9s infinite; }
+
+@keyframes slide-animation {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    33.33% { opacity: 1; }
+    53.33% { opacity: 0; }
+    100% { opacity: 0; }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body style="background-image: url('login_background.jpg');">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="traffic_management_logo.png" alt="Traffic Management Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Careers.html">Career</a></li>
+                <li><a href="Location.html">Locations</a></li>
+                <li><a href="About_us.html">About Us</a></li>
+                <li><a href="Complain.html">Complain</a></li>
+                <li><a href="Login.html">Client Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="options">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <span class="divider"> | </span>
+                    <a href="Signin.html" class="new-user">New user? Sign in here</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

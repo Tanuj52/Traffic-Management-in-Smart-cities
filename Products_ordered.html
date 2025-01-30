@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Vue Shop</title>
+  <link rel="stylesheet" href="Products_ordered.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ appTitle }}</h1>
+    <div class="grid">
+      <!-- Products Section -->
+      <div class="col-sx products">
+        <h2>Products</h2>
+        <ul class="products-list">
+          <li v-for="product in products" :key="product.id" class="product">
+            <div class="box">
+              <img :src="product.image" alt="product.title" class="image">
+              <h3 class="title">{{ product.title }}</h3>
+              <p>{{ product.price | currency }}</p>
+              <button @click="addItem(product)">Add to Cart</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Cart Section -->
+      <div class="col-dx cart">
+        <h2>Your Cart</h2>
+        <table class="cart-list" v-if="cart.length > 0">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th class="head-quantity">Quantity</th>
+              <th class="head-price">Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in cart" :key="item.id">
+              <td class="title">{{ item.title }}</td>
+              <td class="quantity">
+                <span class="qty-handler">
+                  <span @click="sub(item)">-</span>
+                  {{ item.quantity }}
+                  <span @click="add(item)">+</span>
+                </span>
+              </td>
+              <td class="price">{{ item.price | currency }}</td>
+              <td class="total">{{ (item.price * item.quantity) | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p v-if="cart.length === 0" class="no-items-text">No items in cart</p>
+        <p class="total">Total: {{ total | currency }}</p>
+        <!-- Cactus Animation -->
+        <div class="draw">
+          <div class="cactus">
+            <div class="arm"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="cactus">
+            <div class="arm"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="cactus">
+            <div class="arm"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="sky">
+            <div class="montain"></div>
+            <div class="montain two"></div>
+            <div class="sun"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Products_ordered.js"></script>
+</body>
+</html>

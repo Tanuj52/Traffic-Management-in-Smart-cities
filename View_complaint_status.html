@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View Complaint Status</title>
+<link rel="stylesheet" href="view_complaint_status.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Careers.html">Careers</a></li>
+            <li><a href="Location.html">Locations</a></li>
+            <li><a href="Complain.html">Complain</a></li>
+            <li><a href="About_us.html">About us</a></li>
+            <li class="home-button"><a href="Home.html">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <form id="status-form" action="view_complaint_status.php" method="POST">
+        <h2>View Complaint Status</h2>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <button type="submit">Check Status</button>
+    </form>
+</div>
+
+<div id="complaint-details" class="hidden">
+    <h2>Complaint Details</h2>
+    <p><strong>Full Name:</strong> <span id="fullname"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Complaint:</strong> <span id="complaint"></span></p>
+    <p><strong>Submitted At:</strong> <span id="submitted_at"></span></p>
+</div>
+
+<a href="#" class="back-button">Back</a>
+
+<script src="view_complaint_status.js"></script>
+</body>
+</html>

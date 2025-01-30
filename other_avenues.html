@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Avenues - Traffic Management System</title>
+    <link rel="stylesheet" href="other_avenues.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html" class="active">Careers</a></li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="complain.html">Complain</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Other Avenues Content -->
+    <div class="other-avenues-container">
+        <div class="other-avenues-content">
+            <h1>Other Avenues</h1>
+            <p>Explore career opportunities in various fields that support our traffic management system.</p>
+
+            <div class="carousel">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+
+                <div class="slide active">
+                    <div class="image-container">
+                        <img src="careers_2.jpg" alt="Software Engineer">
+                    </div>
+                    <div class="description">
+                        <h2>Software Engineer</h2>
+                        <p>Develop and maintain advanced traffic management software solutions. Work with cutting-edge technologies to improve traffic flow and safety.</p>
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>Bachelor's degree in Computer Science or related field</li>
+                            <li>Experience with programming languages such as Java, C++, and Python</li>
+                            <li>Strong problem-solving and analytical skills</li>
+                        </ul>
+                        <h3>Number of Openings</h3>
+                        <p>5</p>
+                        <h3>Salary</h3>
+                        <p>₹7,00,000 - ₹9,00,000 per year</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="careers_3.jpg" alt="Data Scientist">
+                    </div>
+                    <div class="description">
+                        <h2>Data Scientist</h2>
+                        <p>Analyze traffic data and develop models to predict traffic patterns. Help create data-driven solutions for better traffic management.</p>
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>Bachelor's degree in Data Science, Statistics, or related field</li>
+                            <li>Experience with data analysis tools such as R and SQL</li>
+                            <li>Strong statistical and analytical skills</li>
+                        </ul>
+                        <h3>Number of Openings</h3>
+                        <p>3</p>
+                        <h3>Salary</h3>
+                        <p>₹8,00,000 - ₹10,00,000 per year</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="careers_4.jpg" alt="Project Manager">
+                    </div>
+                    <div class="description">
+                        <h2>Project Manager</h2>
+                        <p>Lead projects that aim to improve traffic systems in urban and rural areas. Coordinate with different teams to ensure successful project delivery.</p>
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>Bachelor's degree in Project Management, Business, or related field</li>
+                            <li>Experience managing large-scale projects</li>
+                            <li>Excellent organizational and communication skills</li>
+                        </ul>
+                        <h3>Number of Openings</h3>
+                        <p>2</p>
+                        <h3>Salary</h3>
+                        <p>₹9,00,000 - ₹11,00,000 per year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        }
+    </script>
+</body>
+</html>

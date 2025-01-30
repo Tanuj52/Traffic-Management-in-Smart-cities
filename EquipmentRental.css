@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+nav {
+    background: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    padding-top: 80px;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Set a max height to keep the image proportional */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    color: #041835;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.description {
+    padding: 20px;
+}
+
+.description h2 {
+    color: #041835;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.description p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1em;
+}

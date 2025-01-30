@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="traffic_management_logo.png" alt="Traffic Management Logo">
+            </div>
+            <div class="toggle-menu" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger icon symbol -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showContent('services')">Services Requested <span id="services-count">0</span></a></li>
+            <li><a href="#" onclick="showContent('jobs')">Jobs Applied <span id="jobs-count">0</span></a></li>
+            <li><a href="#" onclick="showContent('products')">Products Cart <span id="products-count">0</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content" id="content">
+        <div id="services" class="content-section">
+            <h2>Services Requested</h2>
+            <p>No services requested yet. <a href="services_request.html">Request Services</a></p>
+        </div>
+        <div id="jobs" class="content-section">
+            <h2>Jobs Applied</h2>
+            <p>No jobs applied for yet. <a href="apply_jobs.html">Apply for Jobs</a></p>
+        </div>
+        <div id="products" class="content-section">
+            <h2>Products Cart</h2>
+            <p>No products in the cart yet. <a href="Products_ordered.html">Buy Products</a></p>
+        </div>
+    </div>
+
+    <!-- Floating Home Button -->
+    <div class="home-link">
+        <a href="Home.html">Home</a>
+    </div>
+
+    <script src="dashboard.js" defer></script>
+</body>
+</html>

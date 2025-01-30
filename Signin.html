@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New User? Sign in</title>
+    <link rel="stylesheet" href="Signin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="traffic_management_logo.png" alt="Logo">
+    </div>
+    <br><br><br><br>
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="title">Sign In</div>
+        <form action="Signin.php" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" placeholder="Enter your username" name="Username" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your full name" name="Full_Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your Email" name="Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your Phone Number" name="Phone_Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your Password" name="Password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" placeholder="Confirm your Password" name="Confirm_Password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Gender</span>
+                    <select name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_field">
+                <input type="submit" value="Sign In" name="Signin">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
